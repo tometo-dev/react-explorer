@@ -73,6 +73,8 @@ function stateReducer(state: State, _action: Action): State {
 
       const namePath = objectPath === "" ? "name" : `${objectPath}.name`;
 
+      console.log({ objectPath, namePath });
+
       const updatedState = set(oldState, namePath, newName);
       return updatedState;
     }
